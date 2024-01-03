@@ -1,0 +1,10 @@
+﻿################################################################################
+# Ce fichier .gitignore a été automatiquement créé par Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Bataille/config
+/TP1/obj/Debug
+*.user
+/TP1/bin
+/.vs/Bataille/v17
+/packages

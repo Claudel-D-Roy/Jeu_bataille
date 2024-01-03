@@ -1,0 +1,118 @@
+﻿@import "init.scss";
+
+body {
+    background-image: url(#{$ImageFond});
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    margin: 0px;
+    position: relative;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#message {
+    display: none;
+    text-align: center;
+    background-color: yellow;
+    color: red;
+}
+
+table {
+    color: white;
+    margin: 12px;
+    width: 45%;
+    text-align: justify-all;
+}
+
+#container {
+    background-color: darkgreen;
+    border: 10px solid black;
+    margin: auto;
+    margin-top: 10px;
+    position: relative;
+    width: 1000px;
+}
+
+.row {
+    height: 195px;
+    margin: 0px;
+}
+
+.col-6 {
+    position: relative;
+}
+
+.source_joueur {
+    cursor: pointer;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.source_ordi, .source_joueur {
+    background-image: url(#{$DessusCarte});
+}
+
+.destination_ordi, .destination_joueur {
+    background-image: url(#{$PaquetVide});
+}
+
+#ordi_pile_stats, #ordi_tourne_stats, #ordi_total_stats, #joueur_pile_stats, #joueur_tourne_stats, #joueur_total_stats {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#brasser_ordi, #brasser_joueur {
+    background-color: red;
+    color: white;
+    visibility: hidden;
+}
+
+#bataille_ordi, #bataille_joueur {
+    color: yellow;
+    font-size: 55px;
+    font-weight: bold;
+    visibility: hidden;
+}
+
+.carte {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    transform: rotate(90deg) translate(-50px, -150px);
+    height: 150%;
+    width: 175px;
+    position: absolute;
+}
+
+.carteVide {
+    background-image: url('../../cartes/#{$PaquetVide}');
+}
+
+.carteDessous {
+    background-image: url('../../cartes/#{$DessusCarte}');
+}
+
+$NomCarte: Coeur;
+
+@for $i from 1 through 4 {
+
+    @for $i from 2 through 14 {
+        .#{$NomCarte}-#{$i} {
+            background-image: url('../../cartes/#{$NomCarte}-#{$i}.png')
+        }
+    }
+
+    @if $NomCarte == 'Coeur' {
+        $NomCarte: 'Pique';
+    }
+    @else if $NomCarte == 'Pique' {
+        $NomCarte: 'Carreau';
+    }
+    @else if $NomCarte == 'Carreau' {
+        $NomCarte: 'Trefle';
+    }
+}

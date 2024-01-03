@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="fr-ca">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="author" content="Claudel D. Roy, William Jubinville, Mathieu Duval" />
+	<meta name="keywords" content="jeu, cartes, bataille" />
+	<title>Bataille</title>
+	<link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+	<link href="styles/css/styles.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+	<div id="container">
+		<h1 id="message"></h1>
+		<div class="row">
+			<div class="col-6">
+				<div class="source_ordi carte"></div>
+			</div>
+			<div class="col-6 stats_ordi">
+				<table id="stats_ordi_table">
+					<thead>
+						<tr>
+							<th colspan="2"><h2>Ordinateur:</h2></th>
+						</tr>
+						<tr>
+							<td><h4>#Cartes:</h4></td>
+							<td id="ordi_pile_stats">26</td>
+						</tr>
+						<tr>
+							<td><h4>#Tournées:</h4></td>
+							<td id="ordi_tourne_stats">0</td>
+						</tr>
+						<tr>
+							<td><h4>#Total:</h4></td>
+							<td id="ordi_total_stats">26</td>
+						</tr>
+					</thead>
+				</table>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-6">
+				<div class="carte destination_ordi"></div>
+			</div>
+			<div class="col-6 message_ordi">
+				<button id="brasser_ordi">Pile vide!! - Rebrasser</button>
+				<p id="bataille_ordi">Bataille!!!</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-6">
+				<div class="carte destination_joueur" ></div>
+			</div>
+			<div class="col-6 stats_joueur">
+				<table id="stats_joueur_table">
+					<thead>
+						<tr>
+							<th colspan="2"><h2>Joueur:</h2></th>
+						</tr>
+						<tr>
+							<td><h4>#Cartes:</h4></td>
+							<td id="joueur_pile_stats">26</td>
+						</tr>
+						<tr>
+							<td><h4>#Tournées:</h4></td>
+							<td id="joueur_tourne_stats">0</td>
+						</tr>
+						<tr>
+							<td><h4>#Total:</h4></td>
+							<td id="joueur_total_stats">26</td>
+						</tr>
+					</thead>
+				</table>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-6">
+				<div class="source_joueur carte"></div>
+			</div>
+			<div class="col-6 message_joueur">
+				<button id="brasser_joueur">Pile vide!! - Rebrasser</button>
+				<p id="bataille_joueur">Bataille!!!</p>
+			</div>
+		</div>
+	</div>
+	<script src="/lib/jquery/jquery.js"></script>
+	<script src="/lib/bootstrap/js/bootstrap.bundle.js"></script>
+	<script src="scripts/compatibilité.js"></script>
+	<script src="/scripts/evenements.js" type="module"></script>
+</body>
+</html>
